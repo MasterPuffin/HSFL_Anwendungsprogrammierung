@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BD2A1793-7606-4F3E-A23B-D9C5F495F60B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Ui.Desktop</RootNamespace>
+    <RootNamespace>De.HsFlensburg.ClientApp013.Ui.Desktop</RootNamespace>
     <AssemblyName>Ui.Desktop</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -53,6 +53,7 @@
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
