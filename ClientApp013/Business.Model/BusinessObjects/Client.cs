@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace De.HsFlensburg.ClientApp013.Business.Model.BusinessObjects {
-    class Client {
+    public class Client {
         public int Id { get; set; }
         public String Name { get; set; }
     }
