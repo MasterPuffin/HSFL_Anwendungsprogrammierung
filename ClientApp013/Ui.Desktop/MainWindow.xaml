@@ -8,26 +8,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <viewModel:ClientViewModel x:Key="Hansi" Id="1234" Name="Hansi Sittich"></viewModel:ClientViewModel>
-        <viewModel:ClientCollectionViewModel x:Key="myList"></viewModel:ClientCollectionViewModel>;
+        <viewModel:ClientViewModel x:Key="Hansi"></viewModel:ClientViewModel>
+        <viewModel:ClientCollectionViewModel x:Key="myList"></viewModel:ClientCollectionViewModel>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <UniformGrid Grid.Column="0">
+        <UniformGrid Grid.Column="0" Margin="10,10,9.8,199">
             <Label VerticalAlignment="Center" HorizontalAlignment="Right">Identifier</Label>
             <TextBox VerticalAlignment="Center" Text="{Binding Source={StaticResource Hansi}, Path=Id}"></TextBox>
             <Label VerticalAlignment="Center" HorizontalAlignment="Right">Name</Label>
             <TextBox VerticalAlignment="Center" Text="{Binding Source={StaticResource Hansi}, Path=Name}"></TextBox>
         </UniformGrid>
-        <DataGrid Grid.Column="1" ItemsSource="{Binding Source={StaticResource myList}}"></DataGrid>
-        <TextBox Text="{Binding Source={StaticResource Hansi}, Path=Id}" HorizontalAlignment="Left" Height="23" Margin="157,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
-        <TextBox Text="{Binding Source={StaticResource Hansi}, Path=Name}" HorizontalAlignment="Left" Height="23" Margin="157,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
-        <Label Content="Identifier" HorizontalAlignment="Left" Margin="46,74,0,0" VerticalAlignment="Top"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="46,127,0,0" VerticalAlignment="Top"/>
-        <DataGrid HorizontalAlignment="Left" Height="203" Margin="383,77,0,0" VerticalAlignment="Top" Width="351"/>
-
+        <DataGrid Grid.Column="1" ItemsSource="{Binding Source={StaticResource myList}}" Margin="10.2,10,9.6,199"></DataGrid>
     </Grid>
 </Window>
