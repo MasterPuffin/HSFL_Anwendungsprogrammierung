@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:De.HsFlensburg.ClientApp013.Ui.Desktop"
-        xmlns:model="clr-namespace:De.HsFlensburg.ClientApp013.Business.Model.BusinessObjects;assembly=Business.Model"
+        xmlns:viewModel="clr-namespace:De.HsFlensburg.ClientApp013.Logic.Ui.Wrapper;assembly=Logic.Ui"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <model:Client x:Key="Hansi" Id="1234" Name="Hansi Sittich"></model:Client>
+        <viewModel:ClientViewModel x:Key="Hansi" Id="1234" Name="Hansi Sittich"></viewModel:ClientViewModel>
     </Window.Resources>
     <Grid>
         <TextBox Text="{Binding Source={StaticResource Hansi}, Path=Id}" HorizontalAlignment="Left" Height="23" Margin="256,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
