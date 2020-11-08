@@ -6,24 +6,16 @@ using System.Threading.Tasks;
 using De.HsFlensburg.ClientApp013.Business.Model.BusinessObjects;
 
 namespace De.HsFlensburg.ClientApp013.Logic.Ui.Wrapper {
-    public class ClientCollectionViewModel {
-        private Client myClient = new Client();
+    public class ClientCollectionViewModel: List<ClientViewModel> {
+        private ClientCollection myClients;
 
-        public int Id {
-            get {
-                return myClient.Id;
-            }
-            set {
-                myClient.Id = value;
-            }
-        }
+        public ClientCollectionViewModel() {
+            //eigene Model-Collection instatiieren
+            myClients = new ClientCollection();
 
-        public string Name {
-            get {
-                return myClient.Name;
-            }
-            set {
-                myClient.Name = value;
+            //Alle Listenelemente des Models holen und Wrappen
+            foreach(Client client in myClients) {
+                this.Add(new ClientViewModel(client));
             }
         }
     }
