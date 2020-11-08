@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <viewModel:ClientViewModel x:Key="Hansi"></viewModel:ClientViewModel>
+        <viewModel:ClientViewModel x:Key="Hansi" Id="1234" Name="Hansi Sittich"></viewModel:ClientViewModel>
         <viewModel:ClientCollectionViewModel x:Key="myList"></viewModel:ClientCollectionViewModel>
     </Window.Resources>
     <Grid>
