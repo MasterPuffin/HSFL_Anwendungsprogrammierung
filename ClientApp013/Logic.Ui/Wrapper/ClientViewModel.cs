@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace De.HsFlensburg.ClientApp013.Logic.Ui.Wrapper {
     public class ClientViewModel {
-        private Client myClient = new Client();
+        public Client myClient = new Client();
 
         public int Id {
             get {
