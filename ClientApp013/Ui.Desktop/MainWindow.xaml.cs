@@ -1,4 +1,5 @@
-﻿using System;
+﻿using De.HsFlensburg.ClientApp013.Logic.Ui.Wrapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,17 @@ namespace De.HsFlensburg.ClientApp013.Ui.Desktop {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+        }
+
+        private void AddClientToList(object sender, RoutedEventArgs e) {
+            ClientCollectionViewModel list = this.FindResource("myList") as ClientCollectionViewModel;
+            if (list != null) {
+                ClientViewModel clientVM = new ClientViewModel();
+                clientVM.Id = Int16.Parse(IdTextBox.Text);
+                clientVM.Name = NameTextBox.Text;
+                list.Add(clientVM);
+            }
+
         }
     }
 }
