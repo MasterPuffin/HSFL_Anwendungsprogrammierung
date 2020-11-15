@@ -5,6 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace De.HsFlensburg.ClientApp013.Business.Model.BusinessObjects {
-    class ClientCollection: List<Client> {
+    public class ClientCollection : List<Client> {
+        public ClientCollection() {
+            Client client1 = new Client();
+            client1.Id = 345;
+            client1.Name = "Samson";
+            this.Add(client1);
+        }
     }
 }

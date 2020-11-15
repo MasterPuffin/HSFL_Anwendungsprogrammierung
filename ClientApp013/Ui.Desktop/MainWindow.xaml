@@ -4,17 +4,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:De.HsFlensburg.ClientApp013.Ui.Desktop"
-        xmlns:model="clr-namespace:De.HsFlensburg.ClientApp013.Business.Model.BusinessObjects;assembly=Business.Model"
+        xmlns:viewModel="clr-namespace:De.HsFlensburg.ClientApp013.Logic.Ui.Wrapper;assembly=Logic.Ui"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <model:Client x:Key="Hansi" Id="1234" Name="Hansi Sittich"></model:Client>
+        <viewModel:ClientViewModel x:Key="Hansi" Id="1234" Name="Hansi Sittich"></viewModel:ClientViewModel>
+        <viewModel:ClientCollectionViewModel x:Key="myList"></viewModel:ClientCollectionViewModel>
     </Window.Resources>
     <Grid>
-        <TextBox Text="{Binding Source={StaticResource Hansi}, Path=Id}" HorizontalAlignment="Left" Height="23" Margin="256,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
-        <TextBox Text="{Binding Source={StaticResource Hansi}, Path=Name}" HorizontalAlignment="Left" Height="23" Margin="256,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
-        <Label Content="Identifier" HorizontalAlignment="Left" Margin="145,79,0,0" VerticalAlignment="Top"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="145,132,0,0" VerticalAlignment="Top"/>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <UniformGrid Grid.Column="0" Margin="10,10,9.8,199">
+            <Label VerticalAlignment="Center" HorizontalAlignment="Right">Identifier</Label>
+            <TextBox VerticalAlignment="Center" Text="{Binding Source={StaticResource Hansi}, Path=Id}"></TextBox>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Right">Name</Label>
+            <TextBox VerticalAlignment="Center" Text="{Binding Source={StaticResource Hansi}, Path=Name}"></TextBox>
+        </UniformGrid>
+        <DataGrid Grid.Column="1" ItemsSource="{Binding Source={StaticResource myList}}" Margin="10.2,10,9.6,199"></DataGrid>
     </Grid>
 </Window>
