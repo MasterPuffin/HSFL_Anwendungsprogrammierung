@@ -1,4 +1,5 @@
-﻿using De.HsFlensburg.ClientApp013.Logic.Ui.Wrapper;
+﻿using De.HsFlensburg.ClientApp013.Business.Model.BusinessObjects;
+using De.HsFlensburg.ClientApp013.Logic.Ui.Wrapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,21 +44,21 @@ namespace De.HsFlensburg.ClientApp013.Ui.Desktop {
             }
         }
 
-        private void DelClientInList(object sender, RoutedEventArgs e) {
+        private void DeleteClientInList(object sender, RoutedEventArgs e) {
             ClientCollectionViewModel list = this.FindResource("myList") as ClientCollectionViewModel;
             if (list != null) {
                 list.RemoveAt(0);
             }
         }
 
-        private void DelClientInModelList(object sender, RoutedEventArgs e) {
+        private void DeleteClientInModelList(object sender, RoutedEventArgs e) {
             ClientCollectionViewModel list = this.FindResource("myList") as ClientCollectionViewModel;
             if (list != null) {
                 list.myClients.RemoveAt(0);
             }
         }
 
-        private void DelModelCollection(object sender, RoutedEventArgs e) {
+        private void DeleteModelCollection(object sender, RoutedEventArgs e) {
             ClientCollectionViewModel list = this.FindResource("myList") as ClientCollectionViewModel;
             if (list != null) {
                 list.myClients.Clear();

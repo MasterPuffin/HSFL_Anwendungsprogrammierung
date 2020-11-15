@@ -23,8 +23,8 @@
 
             <Button Click="AddClientToList" Content="ViewModel Neuer Kunde" VerticalAlignment="Center" HorizontalAlignment="Right"/>
             <Button Click="AddClientToModelList" Content="Model Neuer Kunde" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <Button Click="DelCientInList" Content="ViewModel Element löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <Button Click="DelCientInModelList" Content="Model Element löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <Button Click="DeleteClientInList" Content="ViewModel Element löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <Button Click="DeleteClientInModelList" Content="Model Element löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
             <Button Click="DeleteViewModelCollection" Content="ViewModel Collection löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
             <Button Click="DeleteModelCollection" Content="Model Collection löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
         </UniformGrid>
