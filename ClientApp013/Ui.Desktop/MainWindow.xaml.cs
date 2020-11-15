@@ -31,7 +31,44 @@ namespace De.HsFlensburg.ClientApp013.Ui.Desktop {
                 clientVM.Name = NameTextBox.Text;
                 list.Add(clientVM);
             }
+        }
 
+        private void AddClientToModelList(object sender, RoutedEventArgs e) {
+            ClientCollectionViewModel list = this.FindResource("myList") as ClientCollectionViewModel;
+            if (list != null) {
+                Client client = new Client();
+                client.Id = Int16.Parse(IdTextBox.Text);
+                client.Name = NameTextBox.Text;
+                list.myClients.Add(client);
+            }
+        }
+
+        private void DelClientInList(object sender, RoutedEventArgs e) {
+            ClientCollectionViewModel list = this.FindResource("myList") as ClientCollectionViewModel;
+            if (list != null) {
+                list.RemoveAt(0);
+            }
+        }
+
+        private void DelClientInModelList(object sender, RoutedEventArgs e) {
+            ClientCollectionViewModel list = this.FindResource("myList") as ClientCollectionViewModel;
+            if (list != null) {
+                list.myClients.RemoveAt(0);
+            }
+        }
+
+        private void DelModelCollection(object sender, RoutedEventArgs e) {
+            ClientCollectionViewModel list = this.FindResource("myList") as ClientCollectionViewModel;
+            if (list != null) {
+                list.myClients.Clear();
+            }
+        }
+
+        private void DeleteViewModelCollection(object sender, RoutedEventArgs e) {
+            ClientCollectionViewModel list = this.FindResource("myList") as ClientCollectionViewModel;
+            if (list != null) {
+                list.Clear();
+            }
         }
     }
 }

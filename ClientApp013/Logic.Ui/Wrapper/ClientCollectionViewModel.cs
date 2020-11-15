@@ -9,7 +9,7 @@ using De.HsFlensburg.ClientApp013.Business.Model.BusinessObjects;
 
 namespace De.HsFlensburg.ClientApp013.Logic.Ui.Wrapper {
     public class ClientCollectionViewModel : ObservableCollection<ClientViewModel> {
-        private ClientCollection myClients;
+        public ClientCollection myClients;
         private bool syncDisabled = false;
 
         public ClientCollectionViewModel() {

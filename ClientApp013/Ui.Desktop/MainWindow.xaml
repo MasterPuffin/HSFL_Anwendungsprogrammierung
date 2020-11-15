@@ -21,7 +21,12 @@
             <Label VerticalAlignment="Center" HorizontalAlignment="Right">Name</Label>
             <TextBox VerticalAlignment="Center" x:Name="NameTextBox"></TextBox>
 
-            <Button Click="AddClientToList" Content="Neuer Kunde" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <Button Click="AddClientToList" Content="ViewModel Neuer Kunde" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <Button Click="AddClientToModelList" Content="Model Neuer Kunde" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <Button Click="DelCientInList" Content="ViewModel Element löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <Button Click="DelCientInModelList" Content="Model Element löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <Button Click="DeleteViewModelCollection" Content="ViewModel Collection löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <Button Click="DeleteModelCollection" Content="Model Collection löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
         </UniformGrid>
         <DataGrid Grid.Column="1" ItemsSource="{Binding Source={StaticResource myList}}"></DataGrid>
     </Grid>
