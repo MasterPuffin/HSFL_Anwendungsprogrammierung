@@ -8,8 +8,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <viewModel:ClientCollectionViewModel x:Key="myList"></viewModel:ClientCollectionViewModel>
+        <viewModels:MainWindowViewModel x:Key="myViewModel"></viewModels:MainWindowViewModel>
     </Window.Resources>
+    <Window.DataContext>
+        <Binding Source="{StaticResource myViewModel}"></Binding>
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -21,13 +24,13 @@
             <Label VerticalAlignment="Center" HorizontalAlignment="Right">Name</Label>
             <TextBox VerticalAlignment="Center" x:Name="NameTextBox"></TextBox>
 
-            <Button Click="AddClientToList" Content="ViewModel Neuer Kunde" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <Button Command="{Binding AddClientToList, Mode=OneWay}" Content="ViewModel Neuer Kunde" VerticalAlignment="Center" HorizontalAlignment="Right"/>
             <Button Click="AddClientToModelList" Content="Model Neuer Kunde" VerticalAlignment="Center" HorizontalAlignment="Right"/>
             <Button Click="DeleteClientInList" Content="ViewModel Element löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
             <Button Click="DeleteClientInModelList" Content="Model Element löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
             <Button Click="DeleteViewModelCollection" Content="ViewModel Collection löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
             <Button Click="DeleteModelCollection" Content="Model Collection löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
         </UniformGrid>
-        <DataGrid Grid.Column="1" ItemsSource="{Binding Source={StaticResource myList}}"></DataGrid>
+        <DataGrid Grid.Column="1" ItemsSource="{Binding Path=MyList}"></DataGrid>
     </Grid>
 </Window>
