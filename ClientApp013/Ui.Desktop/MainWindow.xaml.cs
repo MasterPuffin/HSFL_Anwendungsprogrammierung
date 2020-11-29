@@ -71,5 +71,10 @@ namespace De.HsFlensburg.ClientApp013.Ui.Desktop {
                 list.Clear();
             }
         }
+
+        private void OpenClientWindow(object sender, RoutedEventArgs e) {
+            NewClientWindow myWindow = new NewClientWindow();
+            myWindow.ShowDialog();
+        }
     }
 }
