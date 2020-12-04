@@ -10,9 +10,10 @@ namespace De.HsFlensburg.ClientApp013.Logic.Ui.ViewModels {
         public ClientCollectionViewModel MyList { get; set; }
         public RelayCommand AddClientToList { get; }
 
-        public MainWindowViewModel() {
+        public MainWindowViewModel(ClientCollectionViewModel model) {
             AddClientToList = new RelayCommand(() => AddClientToListMethod());
-            MyList = new ClientCollectionViewModel();
+            //MyList = new ClientCollectionViewModel();
+            MyList = model;
         }
 
         private void AddClientToListMethod() {

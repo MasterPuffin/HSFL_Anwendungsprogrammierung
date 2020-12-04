@@ -8,10 +8,9 @@
         mc:Ignorable="d"
         Title="NewClientWindow" Height="450" Width="800">
     <Window.Resources>
-        <viewModels:NewClientWindowViewModel x:Key="myViewModel"></viewModels:NewClientWindowViewModel>
     </Window.Resources>
     <Window.DataContext>
-        <Binding Source="{StaticResource myViewModel}"></Binding>
+        <Binding Source="{StaticResource ViewModelLocator}"></Binding>
     </Window.DataContext>
     <Grid>
         <UniformGrid Grid.Column="0" Columns="2">
