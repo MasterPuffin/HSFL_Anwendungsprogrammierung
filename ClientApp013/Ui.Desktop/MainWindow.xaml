@@ -12,9 +12,9 @@
     <Window.DataContext>
         <Binding Source="{StaticResource ViewModelLocator}"></Binding>
     </Window.DataContext>
-    <Window:IsEnabled>
+    <Window.IsEnabled>
         <Binding Source="{StaticResource MessageListener}" Path="BindableProperty"></Binding>
-    </Window:IsEnabled >
+    </Window.IsEnabled >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -27,11 +27,7 @@
             <TextBox VerticalAlignment="Center" x:Name="NameTextBox"></TextBox>
 
             <Button Command="{Binding AddClientToList, Mode=OneWay}" Content="ViewModel Neuer Kunde" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <Button Click="AddClientToModelList" Content="Model Neuer Kunde" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <Button Click="DeleteClientInList" Content="ViewModel Element löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <Button Click="DeleteClientInModelList" Content="Model Element löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <Button Click="DeleteViewModelCollection" Content="ViewModel Collection löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <Button Click="DeleteModelCollection" Content="Model Collection löschen" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <Button Command="{Binding OpenNewClientWindow, Mode=OneWay}" Content="Open Client-Window" VerticalAlignment="Center" HorizontalAlignment="Right"/>
         </UniformGrid>
         <DataGrid Grid.Column="1" ItemsSource="{Binding Path=MyList}"></DataGrid>
     </Grid>
