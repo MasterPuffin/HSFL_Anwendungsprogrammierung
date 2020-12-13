@@ -6,5 +6,6 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <viewModels:ViewModelLocator x:Key="ViewModelLocator"></viewModels:ViewModelLocator>
+        <desktop:MessageListener x:Kex="MessageListener"></desktop:MessageListener>
     </Application.Resources>
 </Application>

@@ -12,6 +12,9 @@
     <Window.DataContext>
         <Binding Source="{StaticResource ViewModelLocator}"></Binding>
     </Window.DataContext>
+    <Window:IsEnabled>
+        <Binding Source = "{StaticResource MessageListener}" Path="BindableProperty"></Binding>
+    </Window:IsEnabled >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
