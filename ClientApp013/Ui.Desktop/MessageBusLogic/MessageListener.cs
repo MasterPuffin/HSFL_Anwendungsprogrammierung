@@ -11,10 +11,10 @@ namespace De.HsFlensburg.ClientApp013.Ui.Desktop.MessageBusLogic {
         }
 
         private void InitMessenger() {
-            ServiceBus.Instance.Register<OpenNewClientWindowMessage>(this, delegate()) {
+            ServiceBus.Instance.Register<OpenNewClientWindowMessage>(this, delegate () {
                 NewClientWindow myWindow = new NewClientWindow();
                 myWindow.ShowDialog();
-            }
+            });
         }
         public bool BindableProperty => true;
     }
