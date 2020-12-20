@@ -21,9 +21,8 @@ namespace De.HsFlensburg.ClientApp013.Services.MessageBus {
         }
 
         public virtual void Execute() {
-            if (action != null && target != null && target.IsAlive) {
+            if (action != null && target != null && target.IsAlive)
                 action.Invoke();
-            }
         }
 
         public void Unload() {
@@ -33,4 +32,5 @@ namespace De.HsFlensburg.ClientApp013.Services.MessageBus {
             }
         }
     }
+
 }

@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace De.HsFlensburg.ClientApp013.Services.MessageBus {
     interface IServiceBus {
-        void Register<TNotification>(object listener, Action<TNotification> action);
-
+        void Register<TNotification>(object listener, Action action);
         void Send<TNotification>(TNotification notification);
-
         void Unregister<TNotification>(object listener);
     }
 }
