@@ -1,5 +1,4 @@
-﻿using De.HsFlensburg.ClientApp013.Business.Model.BusinessObjects;
-using De.HsFlensburg.ClientApp013.Logic.Ui.Wrapper;
+﻿using De.HsFlensburg.ClientApp013.Logic.Ui.Wrapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
